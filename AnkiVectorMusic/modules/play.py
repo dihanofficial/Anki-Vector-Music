@@ -499,7 +499,7 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nor manually add [assistant](https://t.me/AnkiVectorHelper) to your Group and try again</b>",
+                        "\n\nor manually add [assistant](https://t.me/sophiaxmusic) to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -738,7 +738,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via <b>Anki Vector Music</b> 😎".format(message.from_user.mention()),
+            caption="▶️ <b>Playing</b> here the song requested by {} via <b>Sophia Music</b> 😎".format(message.from_user.mention()),
         )
         os.remove("final.png")
         return await lel.delete()
@@ -895,7 +895,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via <b>Anki Vector Music</b> 😎".format(message.from_user.mention()),
+            caption="▶️ <b>Playing</b> here the song requested by {} via <b>Sophia Music</b> 😎".format(message.from_user.mention()),
         )
         os.remove("final.png")
         return await lel.delete()
@@ -1086,7 +1086,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @AnkiVectorHelper to your Group and try again</b>",
+                        "\n\nOr manually add Assistant to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -1284,7 +1284,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ <b>Playing</b> here the song requested by {r_by.mention} via <b>Anki Vector Music</b> 😎",
+            caption=f"▶️ <b>Playing</b> here the song requested by {r_by.mention} via <b>Sophia Music</b> 😎",
         )
         
         os.remove("final.png")
