@@ -598,15 +598,16 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton("Playlist 🎚", "playlist"),
                 ],
                 [
-                    InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                    InlineKeyboardButton("Close Menu 🎛", "cls")],
             ]
         )
         requested_by = message.from_user.first_name
