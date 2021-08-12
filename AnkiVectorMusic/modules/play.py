@@ -541,14 +541,20 @@ async def play(_, message: Message):
             )
             return
         keyboard = InlineKeyboardMarkup(
+             [
             [
-                [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-                ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
-            ]
-        )
+                InlineKeyboardButton("⏹", "leave"),
+                InlineKeyboardButton("⏸", "puse"),
+                InlineKeyboardButton("▶️", "resume"),
+                InlineKeyboardButton("⏭", "skip"),
+            ],
+            [
+                InlineKeyboardButton("Playlist 🗄", "playlist"),
+            ],
+            [
+                InlineKeyboardButton("Close Menu 🎛", "cls")],
+        ]
+    )
         file_name = get_file_name(audio)
         title = file_name
         thumb_name = "https://telegra.ph/file/42efcb69f2ad345ea67fa.jpg"
@@ -691,18 +697,20 @@ async def play(_, message: Message):
             dlurl=url
             dlurl=dlurl.replace("youtube","youtubepp")
             keyboard = InlineKeyboardMarkup(
+                   [
                 [
-                    [
-                        InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                        InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-                    ],
-                    [
-                        InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                        InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                    ],
-                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
-                ]
-            )
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("Playlist 🎚", "playlist"),
+                ],
+                [
+                    InlineKeyboardButton("Close Menu 🎛", "cls")],
+            ]
+        )
             requested_by = message.from_user.first_name
             await generate_cover(requested_by, title, views, duration, thumbnail)
             file_path = await convert(youtube.download(url))   
@@ -847,19 +855,20 @@ async def ytplay(_, message: Message):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
-            [
-                InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-            ],
-            [
-                InlineKeyboardButton(text="❌ Close", callback_data="cls")],
-        ]
-    )
+       [
+                [
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("Playlist 🎚", "playlist"),
+                ],
+                [
+                    InlineKeyboardButton("Close Menu 🎛", "cls")],
+            ]
+        )
     requested_by = message.from_user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await convert(youtube.download(url))
@@ -1233,19 +1242,20 @@ async def lol_cb(b, cb):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
-            [
-                InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-            ],
-            [
-                InlineKeyboardButton(text="❌ Close", callback_data="cls")],
-        ]
-    )
+       [
+                [
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("Playlist 🎚", "playlist"),
+                ],
+                [
+                    InlineKeyboardButton("Close Menu 🎛", "cls")],
+            ]
+        )
     requested_by = useer_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await convert(youtube.download(url))  
