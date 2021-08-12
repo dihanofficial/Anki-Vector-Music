@@ -633,7 +633,7 @@ async def play(_, message: Message):
           await lel.edit("Give me something to play")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**[] (https://telegra.ph/file/1eda1711ff321e87756ef.jpg)**\n\n"
+            toxxt = "**Sophia Music List**\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
